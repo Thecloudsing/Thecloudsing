@@ -183,45 +183,45 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.melody.tank_game;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Melody</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Timing</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> time;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Timing</span><span class="params">(<span class="type">int</span> time)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.time = time;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(time);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        MyPanel.gameSuspend = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>导入的图片</p>
-<p><img src="/img/Java_InputImage/pic/Bubble.png"></p>
-<p><img src="/img/Java_InputImage/pic/Bubble_r.png" alt="Bubble_r"></p>
-<p><img src="/img/Java_InputImage/pic/Bubble_red.png" alt="Bubble_red"></p>
-<p><img src="/img/Java_InputImage/pic/Bubble_red_r.png" alt="Bubble_red_r"></p>
-<p><img src="/img/Java_InputImage/pic/E_bullet.png" alt="E_bullet"></p>
-<p><img src="/img/Java_InputImage/pic/E_bullet_r.png" alt="E_bullet_r"></p>
-<p><img src="/img/Java_InputImage/pic/G_Bullet.png" alt="G_Bullet"></p>
-<p><img src="/img/Java_InputImage/pic/G_Bullet_r.png" alt="G_Bullet_r"></p>
-<p><img src="/img/Java_InputImage/pic/N_bullet.png" alt="N_bullet"></p>
-<p><img src="/img/Java_InputImage/pic/N_bullet_r.png" alt="N_bullet_r"></p>
-<p><img src="/img/Java_InputImage/pic/p.png" alt="p"></p>
-<p><img src="/img/Java_InputImage/pic/pl.png" alt="pl"></p>
-<p><img src="/img/Java_InputImage/pic/plr.png" alt="plr"></p>
-<p><img src="/img/Java_InputImage/pic/Pr.png" alt="Pr"></p>
-<p><img src="/img/Java_InputImage/pic/Star.png" alt="Star"></p>
-<p><img src="/img/Java_InputImage/pic/Star_n.png" alt="Star_n"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_E1.png" alt="Tank_E1"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_E1r.png" alt="Tank_E1r"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_E2.png" alt="Tank_E2"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_E2r.png" alt="Tank_E2r"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_E3.png" alt="Tank_E3"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_E3r.png" alt="Tank_E3r"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Lv1.png" alt="Tank_Lv1"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Lv1r.png" alt="Tank_Lv1r"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Lv2.png" alt="Tank_Lv2"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Lv2r.png" alt="Tank_Lv2r"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Lv3.png" alt="Tank_Lv3"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Lv3r.png" alt="Tank_Lv3r"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Sp.png" alt="Tank_Sp"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Spr.png" alt="Tank_Spr"></p>
-<p><img src="/img/Java_InputImage/pic/Landform/Iron.png"></p>
-<p><img src="/img/Java_InputImage/pic/Landform/Trees.png" alt="Trees"></p>
-<p><img src="/img/Java_InputImage/pic/Landform/Wall.png" alt="Wall"></p>
-<p><img src="/img/Java_InputImage/pic/Landform/Water.png" alt="Water"></p>
-<p><img src="/img/Java_InputImage/pic/Explosion/Explosion1.png"></p>
-<p><img src="/img/Java_InputImage/pic/Explosion/Explosion2.png" alt="Explosion2"></p>
-<p><img src="/img/Java_InputImage/pic/Explosion/Explosion3.png" alt="Explosion3"></p>
-<p><img src="/img/Java_InputImage/pic/Explosion/Explosion4.png" alt="Explosion4"></p>
-<p><img src="/img/Java_InputImage/pic/Explosion/Explosion5.png" alt="Explosion5"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Bubble.png"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Bubble_r.png" alt="Bubble_r"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Bubble_red.png" alt="Bubble_red"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Bubble_red_r.png" alt="Bubble_red_r"></p>
+<p><img src="../../../../img/Java_InputImage/pic/E_bullet.png" alt="E_bullet"></p>
+<p><img src="../../../../img/Java_InputImage/pic/E_bullet_r.png" alt="E_bullet_r"></p>
+<p><img src="../../../../img/Java_InputImage/pic/G_Bullet.png" alt="G_Bullet"></p>
+<p><img src="../../../../img/Java_InputImage/pic/G_Bullet_r.png" alt="G_Bullet_r"></p>
+<p><img src="../../../../img/Java_InputImage/pic/N_bullet.png" alt="N_bullet"></p>
+<p><img src="../../../../img/Java_InputImage/pic/N_bullet_r.png" alt="N_bullet_r"></p>
+<p><img src="../../../../img/Java_InputImage/pic/p.png" alt="p"></p>
+<p><img src="../../../../img/Java_InputImage/pic/pl.png" alt="pl"></p>
+<p><img src="../../../../img/Java_InputImage/pic/plr.png" alt="plr"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Pr.png" alt="Pr"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Star.png" alt="Star"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Star_n.png" alt="Star_n"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_E1.png" alt="Tank_E1"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_E1r.png" alt="Tank_E1r"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_E2.png" alt="Tank_E2"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_E2r.png" alt="Tank_E2r"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_E3.png" alt="Tank_E3"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_E3r.png" alt="Tank_E3r"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_Lv1.png" alt="Tank_Lv1"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_Lv1r.png" alt="Tank_Lv1r"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_Lv2.png" alt="Tank_Lv2"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_Lv2r.png" alt="Tank_Lv2r"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_Lv3.png" alt="Tank_Lv3"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_Lv3r.png" alt="Tank_Lv3r"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_Sp.png" alt="Tank_Sp"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Tank_Spr.png" alt="Tank_Spr"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Landform/Iron.png"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Landform/Trees.png" alt="Trees"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Landform/Wall.png" alt="Wall"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Landform/Water.png" alt="Water"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Explosion/Explosion1.png"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Explosion/Explosion2.png" alt="Explosion2"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Explosion/Explosion3.png" alt="Explosion3"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Explosion/Explosion4.png" alt="Explosion4"></p>
+<p><img src="../../../../img/Java_InputImage/pic/Explosion/Explosion5.png" alt="Explosion5"></p>
 </li>
 </ul>
 
@@ -360,17 +360,17 @@
     
 
 
-<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="../../../../js/jquery-3.4.1.min.js"></script>
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+<script src="../../../../fancybox/jquery.fancybox.min.js"></script>
 
 
 
 
-<script src="/js/script.js"></script>
+<script src="../../../../js/script.js"></script>
 
 
 

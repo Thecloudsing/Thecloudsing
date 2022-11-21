@@ -1600,7 +1600,7 @@
 <li>调用类中的静态成员 [静态加载]</li>
 <li>通过反射 [动态加载]</li>
 </ol>
-<p><img src="/img/Java_InputImage/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%9B%BE_21.3.png"></p>
+<p><img src="../../img/Java_InputImage/%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%9B%BE_21.3.png"></p>
 <p><em>（类加载图_21.3）</em></p>
 <ul>
 <li><p>加载（Loading）：</p>
@@ -1984,14 +1984,14 @@
 <p><strong>子网掩码</strong></p>
 <p>只用一个 IP 地址，无法分辨网络部分与主机部分的分界线。因此，使用子网掩码来表示分界线。</p>
 <p>这个场合，对应的网络部分的子网掩码的二进制数字设为 1</p>
-<p><img src="/img/Java_InputImage/%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81%E5%9B%BE_19.1.png"><br><em>(子网掩码图_19.1)</em></p>
+<p><img src="../../img/Java_InputImage/%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81%E5%9B%BE_19.1.png"><br><em>(子网掩码图_19.1)</em></p>
 <p>此外，还能把子网掩码与 IP 地址组合</p>
 <ul>
 <li>在 IP 地址后加斜线及网络部分二进制数字数（IPV4）：192.168.15.1&#x2F;16</li>
 <li>IPv6：X:X:X:X:X:X:X:X&#x2F;64</li>
 </ul>
 <p>通过更改子网掩码，可以细分网络为多个子网。</p>
-<p><img src="/img/Java_InputImage/%E5%AD%90%E7%BD%91%E5%9B%BE_19.1.png"><br><em>(子网图_19.1)</em></p>
+<p><img src="../../img/Java_InputImage/%E5%AD%90%E7%BD%91%E5%9B%BE_19.1.png"><br><em>(子网图_19.1)</em></p>
 <p><strong>私有地址</strong></p>
 <p>私有地址：与 IP 地址（全局地址）相比，在不同的网络中可以重复的地址。</p>
 <p>私有地址是以下范围中的地址。这些地址不能作为全局地址使用：</p>
@@ -2024,7 +2024,7 @@
 <p><strong>网络通信协议</strong></p>
 <p>协议（TCP&#x2F;IP）</p>
 <p>TCP&#x2F;IP：传输控制协议 &#x2F; 因特网互联协议（Transmission Control Protocol &#x2F; Internet Protocol），又叫 网络通讯协议。这个协议是 Internet 最基本的协议、Internet 国际互联网络的基础。简单来讲，就是由 网络层的 IP 协议 和传输层的 TCP 协议 组成</p>
-<p><img src="/img/Java_InputImage/%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85%E5%9B%BE_19.1.png"></p>
+<p><img src="../../img/Java_InputImage/%E6%95%B0%E6%8D%AE%E5%B0%81%E8%A3%85%E5%9B%BE_19.1.png"></p>
 <p><em>(数据封装图_19.1)</em></p>
 <table>
 <thead>
@@ -2327,45 +2327,45 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.melody.tank_game;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Melody</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@version</span> 1.0</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">Timing</span> <span class="keyword">implements</span> <span class="title class_">Runnable</span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="type">int</span> time;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="title function_">Timing</span><span class="params">(<span class="type">int</span> time)</span>&#123;</span><br><span class="line">        <span class="built_in">this</span>.time = time;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">run</span><span class="params">()</span> &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Thread.sleep(time);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        MyPanel.gameSuspend = <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
 <li><p>导入的图片</p>
-<p><img src="/img/Java_InputImage/pic/Bubble.png"></p>
-<p><img src="/img/Java_InputImage/pic/Bubble_r.png" alt="Bubble_r"></p>
-<p><img src="/img/Java_InputImage/pic/Bubble_red.png" alt="Bubble_red"></p>
-<p><img src="/img/Java_InputImage/pic/Bubble_red_r.png" alt="Bubble_red_r"></p>
-<p><img src="/img/Java_InputImage/pic/E_bullet.png" alt="E_bullet"></p>
-<p><img src="/img/Java_InputImage/pic/E_bullet_r.png" alt="E_bullet_r"></p>
-<p><img src="/img/Java_InputImage/pic/G_Bullet.png" alt="G_Bullet"></p>
-<p><img src="/img/Java_InputImage/pic/G_Bullet_r.png" alt="G_Bullet_r"></p>
-<p><img src="/img/Java_InputImage/pic/N_bullet.png" alt="N_bullet"></p>
-<p><img src="/img/Java_InputImage/pic/N_bullet_r.png" alt="N_bullet_r"></p>
-<p><img src="/img/Java_InputImage/pic/p.png" alt="p"></p>
-<p><img src="/img/Java_InputImage/pic/pl.png" alt="pl"></p>
-<p><img src="/img/Java_InputImage/pic/plr.png" alt="plr"></p>
-<p><img src="/img/Java_InputImage/pic/Pr.png" alt="Pr"></p>
-<p><img src="/img/Java_InputImage/pic/Star.png" alt="Star"></p>
-<p><img src="/img/Java_InputImage/pic/Star_n.png" alt="Star_n"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_E1.png" alt="Tank_E1"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_E1r.png" alt="Tank_E1r"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_E2.png" alt="Tank_E2"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_E2r.png" alt="Tank_E2r"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_E3.png" alt="Tank_E3"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_E3r.png" alt="Tank_E3r"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Lv1.png" alt="Tank_Lv1"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Lv1r.png" alt="Tank_Lv1r"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Lv2.png" alt="Tank_Lv2"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Lv2r.png" alt="Tank_Lv2r"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Lv3.png" alt="Tank_Lv3"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Lv3r.png" alt="Tank_Lv3r"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Sp.png" alt="Tank_Sp"></p>
-<p><img src="/img/Java_InputImage/pic/Tank_Spr.png" alt="Tank_Spr"></p>
-<p><img src="/img/Java_InputImage/pic/Landform/Iron.png"></p>
-<p><img src="/img/Java_InputImage/pic/Landform/Trees.png" alt="Trees"></p>
-<p><img src="/img/Java_InputImage/pic/Landform/Wall.png" alt="Wall"></p>
-<p><img src="/img/Java_InputImage/pic/Landform/Water.png" alt="Water"></p>
-<p><img src="/img/Java_InputImage/pic/Explosion/Explosion1.png"></p>
-<p><img src="/img/Java_InputImage/pic/Explosion/Explosion2.png" alt="Explosion2"></p>
-<p><img src="/img/Java_InputImage/pic/Explosion/Explosion3.png" alt="Explosion3"></p>
-<p><img src="/img/Java_InputImage/pic/Explosion/Explosion4.png" alt="Explosion4"></p>
-<p><img src="/img/Java_InputImage/pic/Explosion/Explosion5.png" alt="Explosion5"></p>
+<p><img src="../../img/Java_InputImage/pic/Bubble.png"></p>
+<p><img src="../../img/Java_InputImage/pic/Bubble_r.png" alt="Bubble_r"></p>
+<p><img src="../../img/Java_InputImage/pic/Bubble_red.png" alt="Bubble_red"></p>
+<p><img src="../../img/Java_InputImage/pic/Bubble_red_r.png" alt="Bubble_red_r"></p>
+<p><img src="../../img/Java_InputImage/pic/E_bullet.png" alt="E_bullet"></p>
+<p><img src="../../img/Java_InputImage/pic/E_bullet_r.png" alt="E_bullet_r"></p>
+<p><img src="../../img/Java_InputImage/pic/G_Bullet.png" alt="G_Bullet"></p>
+<p><img src="../../img/Java_InputImage/pic/G_Bullet_r.png" alt="G_Bullet_r"></p>
+<p><img src="../../img/Java_InputImage/pic/N_bullet.png" alt="N_bullet"></p>
+<p><img src="../../img/Java_InputImage/pic/N_bullet_r.png" alt="N_bullet_r"></p>
+<p><img src="../../img/Java_InputImage/pic/p.png" alt="p"></p>
+<p><img src="../../img/Java_InputImage/pic/pl.png" alt="pl"></p>
+<p><img src="../../img/Java_InputImage/pic/plr.png" alt="plr"></p>
+<p><img src="../../img/Java_InputImage/pic/Pr.png" alt="Pr"></p>
+<p><img src="../../img/Java_InputImage/pic/Star.png" alt="Star"></p>
+<p><img src="../../img/Java_InputImage/pic/Star_n.png" alt="Star_n"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_E1.png" alt="Tank_E1"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_E1r.png" alt="Tank_E1r"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_E2.png" alt="Tank_E2"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_E2r.png" alt="Tank_E2r"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_E3.png" alt="Tank_E3"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_E3r.png" alt="Tank_E3r"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_Lv1.png" alt="Tank_Lv1"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_Lv1r.png" alt="Tank_Lv1r"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_Lv2.png" alt="Tank_Lv2"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_Lv2r.png" alt="Tank_Lv2r"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_Lv3.png" alt="Tank_Lv3"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_Lv3r.png" alt="Tank_Lv3r"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_Sp.png" alt="Tank_Sp"></p>
+<p><img src="../../img/Java_InputImage/pic/Tank_Spr.png" alt="Tank_Spr"></p>
+<p><img src="../../img/Java_InputImage/pic/Landform/Iron.png"></p>
+<p><img src="../../img/Java_InputImage/pic/Landform/Trees.png" alt="Trees"></p>
+<p><img src="../../img/Java_InputImage/pic/Landform/Wall.png" alt="Wall"></p>
+<p><img src="../../img/Java_InputImage/pic/Landform/Water.png" alt="Water"></p>
+<p><img src="../../img/Java_InputImage/pic/Explosion/Explosion1.png"></p>
+<p><img src="../../img/Java_InputImage/pic/Explosion/Explosion2.png" alt="Explosion2"></p>
+<p><img src="../../img/Java_InputImage/pic/Explosion/Explosion3.png" alt="Explosion3"></p>
+<p><img src="../../img/Java_InputImage/pic/Explosion/Explosion4.png" alt="Explosion4"></p>
+<p><img src="../../img/Java_InputImage/pic/Explosion/Explosion5.png" alt="Explosion5"></p>
 </li>
 </ul>
 
@@ -3898,7 +3898,7 @@
 <p>Java 源程序  ——(javac.exe)——&gt; 字节码文件 ——(java.exe)——&gt; 在内存中加载，运行类</p>
 <p>​							 编译异常↑										运行异常↑</p>
 </blockquote>
-<p><img src="/img/Java_InputImage/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB%E5%9B%BE_11.1.png"></p>
+<p><img src="../../img/Java_InputImage/%E5%BC%82%E5%B8%B8%E4%BD%93%E7%B3%BB%E5%9B%BE_11.1.png"></p>
 <p>​	<em>（异常体系图_11.1）</em></p>
 <p>异常分为两大类：运行时异常 和 编译时异常</p>
 <ul>
@@ -4401,17 +4401,17 @@
     
 
 
-<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="../../js/jquery-3.4.1.min.js"></script>
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
+<script src="../../fancybox/jquery.fancybox.min.js"></script>
 
 
 
 
-<script src="/js/script.js"></script>
+<script src="../../js/script.js"></script>
 
 
 
