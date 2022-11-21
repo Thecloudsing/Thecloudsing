@@ -1370,3 +1370,8 @@ pre .javascript .function {
   margin-right: 5px;
   display: inline-block;
 }
+.ioc {
+  width: 30px;
+  right: 30px;
+  margin-top: 5%;
+}
